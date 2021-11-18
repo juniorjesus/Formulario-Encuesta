@@ -14,7 +14,7 @@ Encuesta para tomar en consideración las opiniones de los alumnos del Bootcamp 
 ### Construido con 🛠️
 
 * [Google Fonts](https://fonts.google.com/) - Directorio Interactivo de Fuentes
-* [Htnl5]()https://developer.mozilla.org/es/docs/Web/HTML - Como Lenguaje de Etiquetas de Hipertexto
+* [Htnl5](https://developer.mozilla.org/es/docs/Web/HTML) - Como Lenguaje de Etiquetas de Hipertexto
 * [Css](https://developer.mozilla.org/es/docs/Web/CSS) -Como Hojas de Estilos en Cascada
 
 
