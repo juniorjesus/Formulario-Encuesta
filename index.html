@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interfaz de usuario de un formulario de Encuestas.">
+  <title>Formulario de Encuesta</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="column-header">
+        <h1 id="title">Prueba Vocacional</h1>
+        <p id="description">Nos gustaria saber un poco sobre su experiencia con este bootcamp de Desarrollo FrontEnd.</p>
+        <p id="complemento">¿Podrías responder esta pequeña encuesta evaluando nuestro servicio? Es muy importante para que podamos mejorar.Solo te tomará 1 min.</p>
+      </div>
+
+      <div class="column-image">
+        <div id="image-div">
+          <img src="https://scontent.fbog2-4.fna.fbcdn.net/v/t1.18169-9/14993418_1807068512909987_180335249131938819_n.png?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFkuXK9lvgnjysg7v57QQrnuj9aGjwcCVW6P1oaPBwJVSkiUsnShwT6LOjvGyOKzlVVwudgz9VKKVHt4VujYknh&_nc_ohc=2fzQQMP6uvgAX-XKGHP&_nc_ht=scontent.fbog2-4.fna&oh=601896748e9610c05b5b275198551d11&oe=61BA7F79" width="400" height="400" alt="Survey form icon">
+        </div>
+      </div>
+    </div>
+
+    <form id="survey-form">
+      <div class="form-group">
+        <label id="name-label" for="name">Nombre</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Ingresa tu Nombre" required />
+      </div>
+
+      <div class="form-group">
+        <label id="email-label" for="email">Correo Electrónico</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Introduce tu  Email" required />
+      </div>
+
+      <div class="form-group">
+        <label id="number-label" for="number">Edad</label>
+        <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Edad" />
+      </div>
+
+      <div class="form-group">
+        <p>Situación Laboral</p>
+        <select id="dropdown" name="role" class="form-control" required>
+          <option disabled selected value>Selecciona su estado actual</option>
+          <option value="student">Estudiante</option>
+          <option value="job-full">Empleado a tiempo completo</option>
+          <option value="job-part">Empleado a tiempo parcial</option>
+          <option value="self-employed">Autónomo</option>
+          <option value="unemployed">Desempleado</option>
+          <option value="retired">Jubilado</option>
+          <option value="preferNo">No contesta</option>
+          <option value="other">Otro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p>Nivel de Experiencia</p>
+        <select id="experience-dropdown" name="experience" class="form-control" required>
+          <option disabled selected value>Seleccione su nivel de experiencia</option>
+          <option value="junior">Junior (0-2 años experiencia)</option>
+          <option value="mid">Nivel-Medio (2+ años experiencia)</option>
+          <option value="senior">Senior</option>
+          <option value="executive">Emprendedor</option>
+          <option value="other">Otro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p>En lineas generales como calificarias este Bootcamp?</p>
+        <label>
+          <input name="user-rate" value="excellent" type="radio" class="input-radio" checked />Excelente</label>
+        <label>
+          <input name="user-rate" value="very-good" type="radio" class="input-radio" />Muy Bien</label>
+
+        <label>
+          <input name="user-rate" value="good" type="radio" class="input-radio" />Bueno</label>
+
+        <label>
+          <input name="user-rate" value="fair" type="radio" class="input-radio" />Justo</label>
+
+        <label>
+          <input name="user-rate" value="poor" type="radio" class="input-radio" />Deficiente</label>
+      </div>
+
+      <div class="form-group">
+        <p>¿ Qué tan útiles te parecieron los materiales del Bootcamp (lecturas, videos, tareas, etc)?</p>
+        <label>
+          <input name="materials-rate" value="extremely" type="radio" class="input-radio" checked />Extremadamnete Útil</label>
+        <label>
+          <input name="materials-rate" value="very" type="radio" class="input-radio" />Muy Útil</label>
+
+        <label>
+          <input name="materials-rate" value="somewhat" type="radio" class="input-radio" />Algo Útil</label>
+
+        <label>
+          <input name="materials-rate" value="not-so" type="radio" class="input-radio" />No tan Útil</label>
+
+        <label>
+          <input name="materials-rate" value="no" type="radio" class="input-radio" />No es Útil en lo absoluto</label>
+      </div>
+
+      <div class="form-group">
+        <p>
+          ¿Qué te gustaria que mejoraramos? (Selecciona todo lo que corresponda)
+        </p>
+
+        <label>
+          <input name="prefer" value="lectures" type="checkbox" class="input-checkbox" />Webinars y videos</label>
+
+        <label>
+          <input name="prefer" value="material" type="checkbox" class="input-checkbox" />Materiales mas didácticos, es decir, lecturas</label>
+
+        <label>
+          <input name="prefer" value="assignments" type="checkbox" class="input-checkbox" />Proyectos del curso</label>
+
+        <label>
+          <input name="prefer" value="exams" type="checkbox" class="input-checkbox" />Tareas y Examenes calificados</label>
+
+        <label>
+          <input name="prefer" value="forum" type="checkbox" class="input-checkbox" />Sesiones en vivo</label>
+
+        <label>
+          <input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox" />Cursos Adicionales</label>
+      </div>
+
+      <div class="form-group">
+        <p>¿Algún comentario o sugerencia?</p>
+        <textarea id="comments" class="input-textarea" name="comment" placeholder="Ingresa tu comentario aquí..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">
+          Enviar
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <section class="footer">
+    <p> Desarrollado por -Junior López &copy 2021</p>
+  </section>
+
+</body>
+
+</html>
